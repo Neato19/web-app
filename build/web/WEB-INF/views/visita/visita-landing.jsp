@@ -16,7 +16,7 @@
         <div id="container">
             <h1>Visita</h1>
             <img src="public/img/img.png" alt="imagen"/>
-            <a href="?cmd=login">Login</a>
+            <a href="?cmd=usuario-login">Login</a>
         </div>
     </body>
 </html>

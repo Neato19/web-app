@@ -10,7 +10,7 @@
     <body>
         <div id="container">
             <h1>Bienvenido al Main</h1>
-            <a href="?cmd=logout">Logout</a>
+            <a href="?cmd=usuario-logout">Logout</a>
         </div>
     </body>
 </html>

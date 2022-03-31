@@ -13,7 +13,9 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import org.japo.java.libraries.UtilesComandos;
 import org.japo.java.libraries.UtilesEstaticos;
+import org.japo.java.libraries.UtilesServicios;
 
 /**
  *
@@ -26,47 +28,50 @@ public class Controller extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         ServletConfig config = getServletConfig();
-//        System.out.println("Ruta de Contexto .... " + request.getContextPath());
-//        System.out.println("Ruta del Servlet .... " + request.getPathInfo());
-//        System.out.println("Ruta local .... " + request.getPathTranslated());
-//        System.out.println("Cadena de Peticion .... " + request.getQueryString());
-//        System.out.println("Recurso .... " + request.getServletPath());
-
+        
         if (request.getPathInfo().equals("/")) {
-
             
-            // Request > Comando
-            String cmd = request.getParameter("cmd");
-            
-            // Salida
-            String out;
-            
-            // Discriminar Comando
-            if (cmd == null) {
-//                out = "?cmd=langing";
-                out = "WEB-INF/views/visita/visita-landing.jsp";
-                
-            } else if (cmd.equals("login")) {
-//                out = "?cmd=login";
-                out = "WEB-INF/views/usuario/usuario-login.jsp";
-                
-            } else if (cmd.equals("logout")) {
-//                out = "?cmd=logout";
-                out = "WEB-INF/views/usuario/usuario-logout.jsp";
-                
-            } else if (cmd.equals("main")) {
-//                out = "?cmd=main";
-                out = "WEB-INF/views/main/main-usuario.jsp";
-                
+            if(request.getParameter("svc") != null) {
+                UtilesServicios.procesar(config, request, response);
+            } else if (request.getParameter("cmd") != null) {
+                UtilesComandos.procesar(config, request, response);
             } else {
-                out = "WEB-INF/views/message/recurso-inaccesible.jsp";
+                // Página Predeterminada
+                response.sendRedirect("?cmd=visita-landing");
             }
             
-            // Redirección
-            RequestDispatcher despachador = request.getRequestDispatcher(out);
-            
-            // Lanzar Vista
-            despachador.forward(request, response);
+//            // Request > Comando
+//            String cmd = request.getParameter("cmd");
+//            
+//            // Salida
+//            String out;
+//            
+//            // Discriminar Comando
+//            if (cmd == null) {
+////                out = "?cmd=langing";
+//                out = "WEB-INF/views/visita/visita-landing.jsp";
+//                
+//            } else if (cmd.equals("login")) {
+////                out = "?cmd=login";
+//                out = "WEB-INF/views/usuario/usuario-login.jsp";
+//                
+//            } else if (cmd.equals("logout")) {
+////                out = "?cmd=logout";
+//                out = "WEB-INF/views/usuario/usuario-logout.jsp";
+//                
+//            } else if (cmd.equals("main")) {
+////                out = "?cmd=main";
+//                out = "WEB-INF/views/main/main-usuario.jsp";
+//                
+//            } else {
+//                out = "WEB-INF/views/message/recurso-inaccesible.jsp";
+//            }
+//            
+//            // Redirección
+//            RequestDispatcher despachador = request.getRequestDispatcher(out);
+//            
+//            // Lanzar Vista
+//            despachador.forward(request, response);
 
         } else {
             UtilesEstaticos.procesar(config, request, response);

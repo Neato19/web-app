@@ -10,7 +10,7 @@
     <body>
         <div id="container">
             <h1>Has salido correctamente</h1>
-            <a href="http://localhost:8080/web-app/">Seguir</a>
+            <a href="?cmd=visita-landing">Seguir</a>
         </div>
     </body>
 </html>

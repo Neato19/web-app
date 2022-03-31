@@ -15,7 +15,7 @@
                 <input id="usuario" type="text">
                 <label for="password">Contraseña</label>
                 <input id="password" type="password">
-                <a href="?cmd=main">Enviar</a>
+                <a href="?cmd=main-usuario">Enviar</a>
             </form>
         </div>
     </body>
