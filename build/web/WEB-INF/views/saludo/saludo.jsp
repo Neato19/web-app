@@ -1,7 +1,7 @@
 <%-- 
     Document   : saludo
-    Created on : 29 mar. 2022, 10:34:42
-    Author     : Iván Martínez Sánchez - ivanmasan@outlook.com
+    Created on : 29 mar. 2022, 10:36:03
+    Author     : Iván Martínez Sánchez -  ivanmasan@outlook.com
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -10,8 +10,11 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
+        <link rel="stylesheet" href="public/css/saludo/saludo.css"/>
     </head>
     <body>
-        <h1>Hello World!</h1>
+        <div id="container">
+           <!--<img src="public/img/despedida.jpg" alt="imagen1">--> 
+        </div>
     </body>
 </html>

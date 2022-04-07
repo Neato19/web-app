@@ -8,7 +8,8 @@ package org.japo.java.libraries;
 import java.io.IOException;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
-import java.rmi.ServerException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -17,66 +18,69 @@ import org.japo.java.bll.commands.ICommand;
 
 /**
  *
- * @author Iván Martínez Sánchez - ivanmasan@outlook.com
+ * @author Iván Martínez Sánchez -  ivanmasan@outlook.com
  */
 public class UtilesComandos {
     
+    // Constantes
     private static final String COMMAND_PKG = "org.japo.java.bll.commands";
     private static final String COMMAND_PRE = "Command";
 
-    public static void procesar(
-            ServletConfig config,
-            HttpServletRequest request,
-            HttpServletResponse response)
-            throws ServletException, ServerException, IOException {
-
+    public static void procesar(ServletConfig config, HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        
+        // Request > Nombre de Comando
         String cmdName = request.getParameter("cmd");
-
+        
+        // Nombre del Comando > Objeto Comando
         ICommand cmd = obtenerComando(cmdName);
-
+        
+        // Objeto Comando > Inicializar Comando
         cmd.init(config, request, response);
-
+        
+        // Procesar Comando
         cmd.process();
-
+        
     }
 
-    private static ICommand obtenerComando(String cmdName)
-            throws ServletException, ServerException {
-        //Referencia Comando
-        ICommand cmd;
-
+    private static ICommand obtenerComando(String cmdName) throws ServletException {
+        
+        // Referencia Comando
+            ICommand cmd;
+        
         try {
-
-            //Nombre Comando > Nombre Clase
+            
+            // Nombre Comando > Nombre Clase
             String cmdClassName = obtenerNombreComando(cmdName);
-
-            //Nombre Clase > Objeto Class
+            
+            // Nombre Clase > Objeto Class
             Class<?> cmdClass = Class.forName(cmdClassName);
-
-            //Objeto Class > Constructor Clase
+            
+            // Objeto Class > Constructor Clase
             Constructor<?> constructor = cmdClass.getConstructor();
-
-            //Constructor > Intancia Clase
+            
+            // Constructor Clase > Instancia Clase
             cmd = (ICommand) constructor.newInstance();
+            
+        } catch (ClassNotFoundException | NoSuchMethodException | SecurityException | InstantiationException | IllegalAccessException | IllegalArgumentException | InvocationTargetException ex) {
+//            Logger.getLogger(UtilesComandos.class.getName()).log(Level.SEVERE, null, ex);
 
-        } catch (ClassNotFoundException | NoSuchMethodException
-                | SecurityException | InstantiationException | IllegalAccessException
-                | IllegalArgumentException | InvocationTargetException ex) {
-            // Clase Indefinida | Desconocida
             throw new ServletException(ex.getMessage());
+    
         }
-        //Retorno: comando
-        return cmd;
+
+        // Retorno: Comando
+            return cmd;
+            
     }
 
-    private static String obtenerNombreComando(String cmd) throws ServerException {
+    private static String obtenerNombreComando(String cmd) throws ServletException {
+        
         // Subpaquete
         String sub;
         
         // Nombre Comando > Subpaquete
         if (cmd == null) {
-            throw new ServerException("Comando NO especificado");
-            
+            throw new ServletException("Comando NO especificado");
         } else if (cmd.equals("validation")) {
             sub = "admin";
         } else if (cmd.contains("-")) {
@@ -92,5 +96,5 @@ public class UtilesComandos {
         // Retorno: Nombre Cualificado Clase
         return String.format("%s.%s.%s%s", COMMAND_PKG, sub, COMMAND_PRE, cmd);
     }
-
+    
 }

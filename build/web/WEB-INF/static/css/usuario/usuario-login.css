@@ -24,8 +24,21 @@ body {
     align-items: center;
 }
 
+h1 {
+    font-family: monospace;
+    
+    width: 20vw;
+    padding: 1rem;
+    
+    text-align: center;
+    background-color: white;
+}
+
 form {
-    padding: 5rem;
+    border: 1px solid black;
+    padding: 2rem;
+    
+    background-color: white;
     
     display: flex;
     flex-direction: column;
@@ -35,6 +48,12 @@ form > * {
     margin: 10px;
 }
 
-#container > img {
-    height: 80%;
+.buttonset > input {
+    height: 2rem;
+    width: 12rem;
+}
+
+.fieldset {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
 }

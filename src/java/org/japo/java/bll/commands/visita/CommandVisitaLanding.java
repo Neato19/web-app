@@ -5,25 +5,25 @@
  */
 package org.japo.java.bll.commands.visita;
 
-import org.japo.java.bll.commands.usuario.*;
-import org.japo.java.bll.commands.saludo.*;
 import java.io.IOException;
 import javax.servlet.ServletException;
 import org.japo.java.bll.commands.Command;
 
 /**
  *
- * @author Iván Martínez Sánchez - ivanmasan@outlook.com
+ * @author Iván Martínez Sánchez -  ivanmasan@outlook.com
  */
-public class CommandVisitaLanding extends Command{
+public class CommandVisitaLanding extends Command {
 
     @Override
     public void process() throws ServletException, IOException {
+        
         // Salida
         String out = "visita/visita-landing";
         
         // Redirección
         forward(out);
+        
     }
     
 }
