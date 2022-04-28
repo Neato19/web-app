@@ -9,14 +9,14 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title> WEB-APP | Credencial Correcta </title>
+        <title> WEB-APP | Operación Desconocida </title>
         <link rel="stylesheet" href="public/css/message/credencial-incorrecta.css"/>
         <link rel="icon" type="image/ico" href="public/img/favicon.ico"/>
     </head>
     <body>
         <div id="container">
-            <h2>Credencial Correcta</h2>
-            <p>La credencial introducida es correcta</p>
+            <h2>Operación Desconocida</h2>
+            <p>No es posible realizar la operación indicada</p>
             <a href="?cmd=usuario-login">Continuar</a>
         </div>
     </body>

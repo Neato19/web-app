@@ -9,8 +9,8 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Visita | Landing</title>
-        <link rel="stylesheet" href="public/css/visita/visita-landing.css"/>
+        <title>Main | Usuario</title>
+        <link rel="stylesheet" href="public/css/main/main-usuario.css"/>
         <link rel="stylesheet" href="public/css/partials/header.css"/>
         <link rel="stylesheet" href="public/css/partials/footer.css"/>
         <link rel="icon" type="image/ico" href="public/img/favicon.ico"/>
@@ -19,7 +19,8 @@
         <%@include file="../partials/header.jspf" %>
         
         <div id="container">
-            <a href="?cmd=usuario-login">Log In</a>
+            <p>Página Principal Básico</p>
+            <img src="public/img/admin.jpg" alt="alt"/>
         </div>
         
         <%@include file="../partials/footer.jspf" %>

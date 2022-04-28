@@ -12,11 +12,13 @@ html {
 
 body {
     font-family: sans-serif;
+    background: #212534;
 }
 
 #container {
-    height: 100vh;
+    height: calc(100vh - 10rem);
     gap: 3rem;
+    
     
     display: flex;
     flex-direction: column;
@@ -27,18 +29,21 @@ body {
 h1 {
     font-family: monospace;
     
-    width: 20vw;
+    width: 10rem;
     padding: 1rem;
+    box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.2);
     
     text-align: center;
     background-color: white;
 }
 
 form {
-    border: 1px solid black;
+    border: 1px solid rgb(129, 129, 129);
     padding: 2rem;
     
-    background-color: white;
+    /*background-color: white;*/
+    color: rgb(129, 129, 129);
+    border-radius: 5px;
     
     display: flex;
     flex-direction: column;
@@ -51,9 +56,24 @@ form > * {
 .buttonset > input {
     height: 2rem;
     width: 12rem;
+    background-color: rgb(129, 129, 129);
 }
 
 .fieldset {
     display: grid;
     grid-template-columns: 1fr 3fr;
+}
+
+#user {
+    border: 1px solid rgb(129, 129, 129);
+    background-color: #212534;
+    color: white;
+    
+}
+
+#pass {
+    border: 1px solid rgb(129, 129, 129);
+    background-color: #212534;
+    color: white;
+    
 }

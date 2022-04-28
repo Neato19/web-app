@@ -12,14 +12,13 @@ html {
 
 body {
     font-family: sans-serif;
-    background: #212534;
+    background-color: rgb(242, 240, 241);
+    font-family: monospace;
 }
 
 #container {
-    height: calc(100vh - 10rem);
+    height: 100vh;
     gap: 3rem;
-    
-    font-family: cursive;
     
     display: flex;
     flex-direction: column;
@@ -28,7 +27,7 @@ body {
 }
 
 #container > img {
-    height: 70%;
+    height: 50%;
 }
 
 #container > a {
@@ -36,7 +35,7 @@ body {
     font-family: monospace;
     transition: 0.3s;
     
-    color: white;
+    color: black;
     border: 1px solid grey;
     border-radius: 20px;
     

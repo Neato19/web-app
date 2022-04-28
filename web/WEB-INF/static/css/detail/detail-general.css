@@ -1,0 +1,99 @@
+*, *:before, *::after {
+    margin: 0;
+    padding: 0;
+    
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    font-size: 2.5vh;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+#container {
+    height: calc(100vh - 10rem);
+    padding: 1rem;
+    
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 3fr 1fr 1fr;
+    
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#container > div > p {
+    text-align: justify;
+    font-family: cursive;
+    margin-top: 1rem;
+}
+
+#container > div {
+    height: 100%;
+    padding: 2rem;
+}
+
+#container > div:nth-of-type(3) {
+    grid-row: 2/4;
+}
+
+#container > div > a {
+    text-decoration: none;
+    font-family: monospace;
+    transition: 0.3s;
+    
+    color: black;
+    border: 1px solid grey;
+    border-radius: 20px;
+    
+    padding: 1rem 7rem;
+}
+
+#container > div > a:hover {
+    background-color: grey;
+    border: 1px solid black;
+    color: white;
+}
+
+/* --- */
+
+#cadillac1 {
+    background-image: url(../../img/cadillac11.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    grid-column: 2/3;
+    grid-row: 1/3;
+    height: 100%;
+}
+
+#chevrolet1 {
+    background-image: url(../../img/chevrolet11.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    grid-column: 2/3;
+    grid-row: 1/3;
+    height: 100%;
+}
+
+#ford1 {
+    background-image: url(../../img/ford11.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    grid-column: 2/3;
+    grid-row: 1/3;
+    height: 100%;
+}
+
+#pontiac1 {
+    background-image: url(../../img/pontiac11.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    grid-column: 2/3;
+    grid-row: 1/3;
+    height: 100%;
+}

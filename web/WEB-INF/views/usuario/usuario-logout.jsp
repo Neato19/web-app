@@ -1,7 +1,7 @@
 <%-- 
     Document   : visita-landing
     Created on : 22 mar. 2022, 10:25:48
-    Author     : Iván Martínez Sánchez -  ivanmasan@outlook.com
+    Author     : Iván Martínez Sánchez - ivanmasan@outlook.com
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -17,7 +17,7 @@
         <div id="container">
             <h1>Logout Realizado</h1>
             <h2>¡Nos vemos!</h2>
-            <a href="?cmd=visita-landing">Volver</a>
+            <a href="#">Volver</a>
             <img src="public/img/despedida.jpg" alt="alt"/>
         </div>
     </body>
