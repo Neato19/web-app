@@ -1,7 +1,7 @@
 <%-- 
     Document   : visita-landing
     Created on : 22 mar. 2022, 10:25:48
-    Author     : Iván Martínez Sánchez -  ivanmasan@outlook.com
+    Author     : Iván Martínez Sánchez - ivanmasan@outlook.com
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -17,7 +17,7 @@
         <div id="container">
             <h2>Credencial Correcta</h2>
             <p>La credencial introducida es correcta</p>
-            <a href="?cmd=main-usuario">Continuar</a>
+            <a href="?cmd=usuario-login">Continuar</a>
         </div>
     </body>
 </html>

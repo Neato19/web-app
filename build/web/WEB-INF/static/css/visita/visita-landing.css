@@ -12,10 +12,11 @@ html {
 
 body {
     font-family: sans-serif;
+    background: #212534;
 }
 
 #container {
-    height: 100vh;
+    height: calc(100vh - 10rem);
     gap: 3rem;
     
     display: flex;
@@ -24,6 +25,46 @@ body {
     align-items: center;
 }
 
-#container > img {
-    height: 70%;
+#container > a {
+  height: 400px;
+  width: 250px;
+  font-size: 40px;
+
+  margin: 30px;
+
+  padding: 5px;
+  line-height: 20px;
+  border: 2px;
+  border-style: solid;
+  border-color: rgb(141, 140, 140);
+  border-radius: 15px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  color: rgb(141, 140, 140);
+
+  text-decoration: none;
+  overflow: hidden;
+  transition: 0.3s ease-in-out;
+}
+
+#container > a:hover {
+  border: none;
+
+  color: black;
+  background-color: #dae0e6;
+  box-shadow: 0px 15px 35px -5px rgba(50, 88, 130, 0.32);
+
+  transform: scale(1.125);
+
+  cursor: pointer;
+}
+
+#container > a:active {
+  transform: scale(1.05);
+  transition: 0.1s;
+  cursor: pointer;
 }

@@ -20,7 +20,7 @@ import org.japo.java.libraries.UtilesServicios;
 
 /**
  *
- * @author Iván Martínez Sánchez -  ivanmasan@outlook.com
+ * @author Iván Martínez Sánchez - ivanmasan@outlook.com
  */
 @WebServlet(name = "Controller", urlPatterns = {"", "/public/*"})
 public class Controller extends HttpServlet {

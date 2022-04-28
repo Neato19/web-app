@@ -18,7 +18,7 @@ import org.japo.java.bll.commands.ICommand;
 
 /**
  *
- * @author Iván Martínez Sánchez -  ivanmasan@outlook.com
+ * @author Iván Martínez Sánchez - ivanmasan@outlook.com
  */
 public class UtilesComandos {
     

@@ -11,7 +11,7 @@ import javax.servlet.http.HttpSession;
 
 /**
  *
- * @author Iván Martínez Sánchez -  ivanmasan@outlook.com
+ * @author Iván Martínez Sánchez - ivanmasan@outlook.com
  */
 public final class UtilesEstaticos { 
 

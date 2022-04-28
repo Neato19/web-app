@@ -1,7 +1,7 @@
 <%-- 
     Document   : prueba
     Created on : 15 mar. 2022, 8:54:22
-    Author     : Iván Martínez Sánchez -  ivanmasan@outlook.com
+    Author     : Iván Martínez Sánchez - ivanmasan@outlook.com
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>

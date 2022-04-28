@@ -11,7 +11,7 @@ import org.japo.java.bll.commands.Command;
 
 /**
  *
- * @author Iván Martínez Sánchez -  ivanmasan@outlook.com
+ * @author Iván Martínez Sánchez - ivanmasan@outlook.com
  */
 public class CommandVisitaLanding extends Command {
 

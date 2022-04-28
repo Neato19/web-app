@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  *
- * @author Iván Martínez Sánchez -  ivanmasan@outlook.com
+ * @author Iván Martínez Sánchez - ivanmasan@outlook.com
  */
 public interface ICommand {
     void init(ServletConfig config,HttpServletRequest request, HttpServletResponse response);
